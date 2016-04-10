@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_marginTop="2sp">
+
+    <LinearLayout
+        android:id="@+id/item_expression_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Time: 18:30"
+            android:id="@+id/item_expression_time"
+            android:layout_alignParentTop="true"
+            android:autoText="false"
+            android:clickable="false"
+            android:editable="false"
+            android:password="false"
+            android:layout_marginLeft="4sp"
+            android:textColor="@color/colorBlack"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:gravity="left"
+            android:layout_gravity="left|right" />
+
+        <com.example.androidstudio.kalkulaatoriii.AutoResizeTextView
+            android:id="@+id/item_expression_data"
+            android:layout_below="@+id/item_expression_time"
+            android:layout_width="match_parent"
+            android:layout_height="33sp"
+            android:layout_marginRight="4sp"
+            android:maxLines="1"
+            android:textSize="100sp"
+            android:text="(10+10) = 20"
+            android:gravity="end" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/item_expression_expand"
+        android:layout_below="@+id/item_expression_header"
+        android:layout_width="fill_parent"
+        android:layout_marginTop="1sp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        >
+        <ListView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/expression_item_listView_operation"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="2dp"
+            android:clickable="true"
+            android:longClickable="true" />
+    </RelativeLayout>
+</RelativeLayout>
